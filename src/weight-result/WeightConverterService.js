@@ -2,11 +2,11 @@
 
 const dgram = require('dgram'),
     serverUdp = dgram.createSocket('udp4'),
-    boom = require('boom'),
+    boom = require('@hapi/boom'),
     moment = require('moment'),
     {isString, isInteger, isEmpty, isEqual, isNull, get, set} = require('lodash'),
-    WeightResultModel = require('../model'),
-    ScalesModel = require('../../scales/model');
+    WeightResultModel = require('./WeightResultModel'),
+    ScalesModel = require('../scales/ScaleModel');
 
 const request = [1, 3, 0, 16, 0, 14, 197, 203];
 const message = new Buffer(new Uint8Array(request));
