@@ -2,7 +2,7 @@
 
 const {Scale} = require('../models/models'),
     boom = require('@hapi/boom'),
-    {isUUID} = require('va'),
+    {isUUID} = require('validator'),
     lodash = require('lodash');
 
 
