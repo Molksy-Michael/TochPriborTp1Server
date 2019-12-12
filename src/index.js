@@ -1,9 +1,11 @@
-const Hapi = require('@hapi/hapi');
+const Hapi = require('@hapi/hapi'),
+    WCService = require('./weight-result/WeightConverterService'),
+    schedulers = require('./schedulers');
 
 
 const server = new Hapi.Server({
     host: '0.0.0.0',
-    port: 8008,
+    port: 8009,
     routes: {
         cors: {
             origin: ['*'],
@@ -33,6 +35,15 @@ let start = async() => {
 
         await server.start();
         console.log('Server running at: ', server.info.uri);
+
+        try {
+            WCService.initUpd(2000);
+        } catch (error) {
+            console.error(error);
+        }
+
+        schedulers.LoadReasultsFromTP();
+        schedulers.LoadCurrentMassFromTP();
     } catch(error) {
         console.log(error);
         process.exit(1);

@@ -1,7 +1,8 @@
 const {sequelize, Sequelize} =  require('../setup/sequelize');
 
 const modules = [
-    require('./Scale')
+    require('./Scale'),
+    require('./WeightResult')
 ];
 
 const models = {};

@@ -25,9 +25,11 @@
     "hapi": "^18.1.0",
     "lodash": "^4.17.15",
     "mrhorse": "^4.0.1",
+    "node-schedule": "^1.3.2",
     "pg": "^7.14.0",
     "save": "^2.4.0",
-    "sequelize": "^5.21.2"
+    "sequelize": "^5.21.2",
+    "validator": "^12.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",

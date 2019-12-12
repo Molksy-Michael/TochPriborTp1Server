@@ -1,14 +1,14 @@
-const ScaleModel = require('./ScaleModel');
+const ScaleService = require('./ScaleService');
 
 const modelName = 'scale';
 
 module.exports = [
     {
         method: 'GET',
-        path: `/${modelName}/{number}`,
+        path: `/${modelName}/{scaleId}`,
         handler: async (request, h) => {
             try {
-                return await ScaleModel.getByNumber(request.params.number);
+                return await ScaleService.getTsState(request.params.scaleId);
             } catch (error) {
                 throw error;
             }
