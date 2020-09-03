@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Molksy-Michael/TochPriborTp1Server#readme",
   "dependencies": {
     "@hapi/boom": "^8.0.1",
-    "@hapi/hapi": "^18.4.0",
+    "@hapi/hapi": "^19.1.1",
     "dgram": "^1.0.1",
     "fs-finder": "^1.8.1",
     "hapi": "^18.1.0",
